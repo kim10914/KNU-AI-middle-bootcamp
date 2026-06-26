@@ -40,7 +40,7 @@ source .venv/bin/activate
 ### 2. 패키지 설치
 
 ```bash
-pip install openai requests python-dotenv pymupdf
+pip install openai requests python-dotenv pymupdf pytz streamlit
 ```
 
 ### 3. 환경변수 설정
