@@ -17,6 +17,7 @@ dist/
 # Environment / secrets
 .env
 .env.*
+!.env.example
 *.key
 
 # Jupyter
