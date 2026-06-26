@@ -7,16 +7,20 @@ OpenRouter API를 이용해 LLM·이미지 관련 실습을 진행합니다.
 
 ```
 .
-├── chapter01/          # OpenRouter / GPT 기본 호출
-│   ├── gpt_basic.py    # openai SDK로 채팅 완성 호출
-│   └── free.py         # API 키 잔액·한도 조회
-├── chapter02/          # (작업 예정)
-├── chapter03/          # 이미지 관련 실습
-│   ├── hello.ipynb
+├── chapter02/              # OpenRouter / GPT 기본 호출
+│   ├── gpt_basic.py        # openai SDK로 채팅 완성 호출
+│   └── free.py             # API 키 잔액·한도 조회
+├── chapter03/              # 논문을 요약해 주는 AI 연구원 (PDF 요약)
+│   ├── pdf_to_text.py      # PDF 텍스트 추출 (헤더·푸터 포함)
+│   ├── pdf_to_text_pre.py  # 헤더·푸터 제외 전처리
+│   ├── summarize_txt.py    # 텍스트 요약
+│   ├── summarize_pdf.py    # PDF 입력 → 추출 → 요약 (완성본)
+│   └── data/               # 실습용 PDF·출력물 (PDF는 직접 넣기)
+├── chapter04/              # 이미지 관련 실습
 │   ├── image.ipynb
 │   ├── ju_image.ipynb
-│   └── data/images/    # 실습용 이미지
-├── .env.example        # 환경변수 템플릿 (복사해서 .env로 사용)
+│   └── data/images/        # 실습용 이미지
+├── .env.example            # 환경변수 템플릿 (복사해서 .env로 사용)
 ├── .gitignore
 └── README.md
 ```
@@ -36,7 +40,7 @@ source .venv/bin/activate
 ### 2. 패키지 설치
 
 ```bash
-pip install openai requests python-dotenv
+pip install openai requests python-dotenv pymupdf
 ```
 
 ### 3. 환경변수 설정
