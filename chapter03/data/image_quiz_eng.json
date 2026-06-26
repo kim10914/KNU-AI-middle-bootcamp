@@ -1,0 +1,62 @@
+[
+    {
+        "no": 1,
+        "eng": "Which of the following descriptions of the image is incorrect?\n- (1) Many people are gathered indoors and seated.\n- (2) The text \"DIVE 2024 IN BUSAN\" is visible.\n- (3) People are watching a performance.\n- (4) There are multiple lights on the ceiling.",
+        "img": "busan_dive.jpg"
+    },
+    {
+        "no": 2,
+        "eng": "Which of the following descriptions of the image is incorrect?\n- (1) A building made of red brick is visible.\n- (2) There is a yellow sculpture.\n- (3) The words \"Local Stitch\" are displayed on the building.\n- (4) The sculpture is blue.",
+        "img": "local_stitch.jpg"
+    },
+    {
+        "no": 3,
+        "eng": "Which of the following descriptions of the image is incorrect?\n- (1) People are sitting inside a cafe.\n- (2) The wall is painted yellow.\n- (3) An employee is wearing black clothes.\n- (4) Several windows are visible.",
+        "img": "local_stitch_terrarosa.jpg"
+    },
+    {
+        "no": 4,
+        "eng": "Which of the following descriptions of the image is incorrect?\n- (1) The building is made of red brick.\n- (2) The store name is 'PERSONAL COFFEE.'\n- (3) There are multiple cars parked on the road in front of the building.\n- (4) The building is located on a corner.",
+        "img": "mangwon.jpg"
+    },
+    {
+        "no": 5,
+        "eng": "Which of the following descriptions of the image is incorrect?\n- (1) Various types of bread are displayed.\n- (2) There are two employees standing in front of the counter.\n- (3) Price tags are attached to the bread.\n- (4) The employees are wearing hats.",
+        "img": "mangwon_bakery.jpg"
+    },
+    {
+        "no": 6,
+        "eng": "Which of the following descriptions of the image is incorrect?\n- (1) The research and development expenditure for the USA is 720,880 million dollars.\n- (2) Israel's R&D expenditure as a percentage of GDP is 5.44%.\n- (3) China's R&D expenditure is lower than that of France.\n- (4) South Korea's research expenditure is 89,282 million dollars.",
+        "img": "oecd_rnd_2021_large.png"
+    },
+    {
+        "no": 7,
+        "eng": "Which of the following descriptions of the image is incorrect?\n- (1) The United States' R&D expenditure is approximately $720,880 million.\n- (2) South Korea's R&D expenditure as a percentage of GDP is 4.93%.\n- (3) France's R&D expenditure is higher than Germany's.\n- (4) Japan's R&D expenditure is approximately $165,043 million.",
+        "img": "oecd_rnd_2021_small.png"
+    },
+    {
+        "no": 8,
+        "eng": "Which of the following descriptions of the image is incorrect?\n- (1) The research and development expenditure of the USA is 806,013 million US dollars.\n- (2) China's research and development expenditure as a percentage of GDP is 2.43%.\n- (3) France's research and development expenditure is 133,867 million US dollars.\n- (4) Israel's research and development expenditure as a percentage of GDP is 5.56%.",
+        "img": "oecd_rnd_2022.png"
+    },
+    {
+        "no": 9,
+        "eng": "Which of the following descriptions of the image is incorrect?\n- (1) The research and development expenditure of the USA is about 800,000 million USD.\n- (2) China's R&D expenditure ratio to GDP is 2.43%.\n- (3) Korea's research and development expenditure is about 130,000 million USD.\n- (4) Japan's R&D expenditure ratio to GDP is 3.13%.",
+        "img": "oecd_rnd_2022_large.png"
+    },
+    {
+        "no": 10,
+        "eng": "Which of the following descriptions of the image is incorrect?\n- (1) People are working in front of a building.\n- (2) The name of the bakery café is 'pomne verte.'\n- (3) There is a store called '뉴트리코어.'\n- (4) The advertisement banner shows pictures of fruit.",
+        "img": "sangam_interior.jpg"
+    },
+    {
+        "no": 11,
+        "eng": "Which of the following descriptions of the image is incorrect?\n- (1) People are sitting in a cafe.\n- (2) The cafe is a bright and spacious area.\n- (3) Various foods are placed on the table.\n- (4) Natural light is coming through the windows.",
+        "img": "seolleung_terrarosa.jpg"
+    },
+    {
+        "no": 12,
+        "eng": "Which of the following descriptions of the image is incorrect?\n- (1) People are lined up next to a bus.\n- (2) The window has \"COFFEE BAKERY\" written on it.\n- (3) One person is talking on a phone.\n- (4) The location where people are lining up is a subway station.",
+        "img": "stanford_coffee.jpg"
+    }
+]
