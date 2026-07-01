@@ -9,7 +9,8 @@
 | 1 | [1_whisper_api.ipynb](1_whisper_api.ipynb) | 위스퍼 **API**로 받아쓰기 + 영어 번역 (OpenAI 크레딧 필요) |
 | 2 | [2_huggingface_whisper.ipynb](2_huggingface_whisper.ipynb) | **로컬** 위스퍼(HuggingFace)로 받아쓰기 → CSV 저장 |
 | 3 | [3_pyannote_diarization.ipynb](3_pyannote_diarization.ipynb) | **화자 분리**(pyannote) → RTTM → 화자별 CSV로 정리 |
-| 4 | [4_whisper_stt.py](4_whisper_stt.py) | 받아쓰기를 **함수화**해 텍스트+타임스탬프 DataFrame 생성 |
+| 4 | [4_whisper_stt.py](4_whisper_stt.py) | 받아쓰기 + 화자 분리를 **함수화**한 통합 스크립트 |
+| 5 | [5_summarize.ipynb](5_summarize.ipynb) | 받아쓴 대화록을 **GPT(gpt-4o)로 요약** |
 
 `audio/` 에 실습용 음성 파일이 있다. (`lsy_audio_2023_58s.mp3` 1인 / `싼기타_비싼기타.mp3` 2인)
 
