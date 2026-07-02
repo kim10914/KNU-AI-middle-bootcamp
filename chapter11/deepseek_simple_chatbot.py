@@ -5,7 +5,7 @@
 
 사전 준비:
   1) https://ollama.com 에서 올라마 설치 (설치 후 VS Code 재시작)
-  2) 터미널에서 모델 내려받기:  ollama run deepseek-r1:8b
+  2) 터미널에서 모델 내려받기:  ollama run deepseek-r1:1.5b
   3) pip install langchain-ollama
 
 실행:  python chapter11/deepseek_simple_chatbot.py   (종료: exit)

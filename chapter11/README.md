@@ -16,11 +16,15 @@
 ### 1) 올라마 설치 + 모델 내려받기
 
 - https://ollama.com 에서 올라마 설치 (**설치 후 VS Code를 반드시 재시작**해야 `ollama` 명령이 잡힌다)
-- 딥시크-R1 8B 모델 내려받기 (약 5.2GB):
+- 딥시크-R1 모델 내려받기. 실습 코드는 가볍고 빠른 **1.5B**를 기본으로 쓴다 (약 1.1GB):
 
 ```powershell
-ollama run deepseek-r1:8b
+ollama pull deepseek-r1:1.5b
 ```
+
+> GPU가 넉넉하면 `deepseek-r1:8b`(약 5.2GB)가 답변 품질이 더 좋다.
+> 그때는 세 파일의 `ChatOllama(model=...)` 를 `deepseek-r1:8b` 로 바꾼다.
+> 8B는 CPU로 돌리면 추론(Thinking) 과정 때문에 상당히 느리다.
 
 > 딥시크-R1은 답변 전에 추론(Thinking) 과정을 거치며 `<think>...</think>` 로 함께 출력한다.
 > 경량 모델 특성상 가끔 다른 언어(중국어 등)가 섞일 수 있다. 종료는 `Ctrl + D`.

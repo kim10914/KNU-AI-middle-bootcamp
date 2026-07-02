@@ -18,7 +18,7 @@ try:
     from langchain_classic.chains.combine_documents import create_stuff_documents_chain
 except ModuleNotFoundError:
     from langchain.chains.combine_documents import create_stuff_documents_chain
-from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
+from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder, PromptTemplate
 from langchain_core.output_parsers import StrOutputParser  # 문자열 출력 파서
 
 load_dotenv()
@@ -45,16 +45,32 @@ vectorstore = Chroma(
 retriever = vectorstore.as_retriever(search_kwargs={"k": 3})
 
 # ── 검색한 청크(context)를 근거로 답변하는 체인 ─────────────────
+# (1) 각 청크를 context에 넣을 때, 본문 앞에 출처(파일명·페이지)를 함께 붙인다.
+#     이렇게 해야 모델이 출처 정보를 "볼 수" 있어 답변에 인용할 수 있다.
+#     metadata 의 source(파일명)·page_label(페이지 번호) 를 사용한다.
+document_prompt = PromptTemplate.from_template(
+    "[출처: {source} p.{page_label}]\n{page_content}"
+)
+
+# (2) 시스템 프롬프트에서 출처 표기 방식을 지시한다.
 question_answering_prompt = ChatPromptTemplate.from_messages(
     [
         (
             "system",
-            "사용자의 질문에 대해 아래 context에 기반하여 답변하라.:\n\n{context}",
+            "사용자의 질문에 대해 아래 context에 기반하여 답변하라.\n"
+            "- context에 있는 내용만 사용하고, 없는 내용은 지어내지 말고 "
+            "'제공된 문서에서 찾을 수 없습니다'라고 답하라.\n"
+            "- 답변에 사용한 정보 뒤에는 반드시 그 근거가 된 출처를 "
+            "[출처: 파일명 p.페이지] 형식으로 표기하라.\n"
+            "- 답변 마지막에는 사용한 출처 목록을 정리해 보여라.\n\n"
+            "{context}",
         ),
         MessagesPlaceholder(variable_name="messages"),
     ]
 )
-document_chain = create_stuff_documents_chain(llm, question_answering_prompt)
+document_chain = create_stuff_documents_chain(
+    llm, question_answering_prompt, document_prompt=document_prompt
+)
 
 # ── 질의 확장(query augmentation) 체인 ──────────────────────────
 # 기존 대화 내용을 활용해 모호한 질문을 명확한 한 문장으로 변환한다.
