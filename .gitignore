@@ -31,3 +31,7 @@ Thumbs.db
 
 # Agent tooling
 .agents/
+
+# chapter10 RAG artifacts (용량 큰 벡터 DB / 실습 PDF)
+chapter10/chroma_store/
+chapter10/data/*.pdf
